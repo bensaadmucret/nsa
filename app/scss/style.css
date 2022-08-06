@@ -105,7 +105,7 @@ h2,
 h3 {
   font-weight: 300;
   line-height: 1.15;
-  color: hsl(233deg, 26%, 24%);
+  color: #3577f6;
   margin-top: 0px;
 }
 
@@ -139,6 +139,10 @@ a,
 a:visited,
 a:hover {
   text-decoration: none;
+}
+
+.p-r-5 {
+  padding-right: 5rem;
 }
 
 .container {
@@ -212,12 +216,12 @@ button,
   position: relative;
   display: inline-block;
   padding: 0.875rem 2.1875rem;
-  background-image: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  background-color: rgb(255, 255, 255);
   border: 0;
   border-radius: 50px;
   cursor: pointer;
-  color: hsl(0deg, 0%, 100%);
-  font-weight: 400;
+  color: #60c6f6;
+  font-weight: 600;
   font-size: 0.875rem;
   transition: opacity 300ms ease-in-out;
   overflow: hidden;
@@ -270,8 +274,9 @@ button:hover::before,
   padding-bottom: 1.0625rem;
 }
 .header__logo img {
-  width: 8rem;
-  height: 4rem;
+  padding-top: 0.8rem;
+  width: 99px;
+  height: 53px;
 }
 .header__toggle {
   position: absolute;
@@ -282,7 +287,7 @@ button:hover::before,
   display: block;
   width: 26px;
   height: 2px;
-  background-color: hsl(233deg, 26%, 24%);
+  background-color: #3577f6;
   transition: all 300ms ease-in-out;
   transform-origin: 3px 1px;
 }
@@ -302,7 +307,7 @@ button:hover::before,
 .header__menu a {
   display: block;
   padding: 0.625rem;
-  color: hsl(233deg, 26%, 24%);
+  color: #3577f6;
   text-align: center;
 }
 .header__links a {
@@ -327,7 +332,7 @@ button:hover::before,
   transition: opacity 300ms ease-in-out;
 }
 .header__links a:hover {
-  color: hsl(233deg, 26%, 24%);
+  color: #3577f6;
 }
 .header__links a:hover::before {
   opacity: 1;
@@ -347,8 +352,12 @@ button:hover::before,
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 39.5rem;
-  margin-top: -5px;
+  margin-top: -15px;
+}
+@media (min-width: 64em) {
+  .hero {
+    min-height: 60rem;
+  }
 }
 @media (min-width: 64em) {
   .hero .container {
@@ -361,6 +370,7 @@ button:hover::before,
   font-family: "Montserrat", sans-serif;
   font-size: medium;
   color: white;
+  margin: 50px;
 }
 .hero__text > h1 {
   font-size: 2.5rem;
@@ -384,6 +394,7 @@ button:hover::before,
   margin-right: 1rem;
   margin-bottom: 1rem;
   color: white;
+  font-size: 0.875rem;
 }
 @media (min-width: 64em) {
   .hero__social-icone {
@@ -394,26 +405,29 @@ button:hover::before,
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    padding: 4rem;
+    padding-top: 10rem;
   }
 }
-.hero__lang {
-  text-align: center;
-  display: flex;
+@media (max-width: 63.9375em) {
+  .hero__social-icone {
+    flex: 2;
+    order: 2;
+    text-align: right;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 10rem;
+  }
 }
-.hero__lang > a {
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+.hero__social-icone > .social-icone__link__lang {
+  margin-top: 90%;
   color: white;
   font-weight: bold;
-  font-size: 16px;
 }
-@media (min-width: 64em) {
-  .hero__lang {
-    position: absolute;
-    right: 4.5rem;
-    top: 27rem;
-    padding: 4rem;
+@media (max-width: 63.9375em) {
+  .hero__social-icone > .social-icone__link__lang {
+    margin-top: 0;
   }
 }
 
@@ -464,7 +478,7 @@ button:hover::before,
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.15;
-  color: hsl(233deg, 26%, 24%);
+  color: #3577f6;
   margin-bottom: 1rem;
 }
 @media (min-width: 64em) {

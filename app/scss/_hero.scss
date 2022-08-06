@@ -1,18 +1,24 @@
-.hero { 
+.hero {
   background-image: url('/images/bg-header.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 39.5rem;
-  margin-top: -5px;
+  margin-top: -15px;
 
+
+  @include breakpoint-up(large) {
+
+    min-height: 60rem;
+
+
+  }
 
   .container {
 
-    @include breakpoint-up(large){    
+    @include breakpoint-up(large) {
       display: flex;
       align-items: center;
-     // justify-content: center;
+
 
     }
   }
@@ -24,8 +30,9 @@
     font-family: 'Montserrat', sans-serif;
     font-size: medium;
     color: white;
-    
-    > h1 {
+    margin: 50px;
+
+    >h1 {
       font-size: 2.5rem;
       font-weight: 900;
       line-height: 1.15;
@@ -33,25 +40,28 @@
       margin-bottom: 1rem;
     }
 
-    @include breakpoint-up(large){
+    @include breakpoint-up(large) {
       flex: 3;
       order: 1;
       text-align: left;
     }
   }
+
   &__social-icone {
     text-align: center;
     display: flex;
-    
 
-    > a {
+
+
+    >a {
       margin-right: 1rem;
       margin-bottom: 1rem;
       color: white;
+      font-size: $font-sm;
     }
- 
 
-    @include breakpoint-up(large){
+
+    @include breakpoint-up(large) {
       flex: 2;
       order: 2;
       text-align: right;
@@ -59,36 +69,35 @@
       justify-content: center;
       flex-wrap: wrap;
       width: 100%;
-      padding: 4rem;
-      
+      padding-top: 10rem;
+
 
     }
-  }
-  &__lang {
-    text-align: center;
-    display: flex;
-    
 
-    > a {
-      margin-right: 1rem;
-      margin-bottom: 1rem;
+    @include breakpoint-down(medium) {
+      flex: 2;
+      order: 2;
+      text-align: right;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      padding-top: 10rem;
+
+
+    }
+
+    >.social-icone__link__lang {
+      margin-top: 90%;
       color: white;
       font-weight: bold;
-      font-size: 16px;
 
-    }
- 
-
-    @include breakpoint-up(large){
-
-      position: absolute;
-      right: 4.5rem;
-      top: 27rem;
-      padding: 4rem;
+      @include breakpoint-down(medium) {
+        margin-top: 0;
       
       
-      
-
+        }
     }
   }
+
 }
