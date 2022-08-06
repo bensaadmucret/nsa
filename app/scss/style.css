@@ -348,7 +348,7 @@ button:hover::before,
 }
 
 .hero {
-  background-image: url("https://bensaadmucret.github.io/nsa/images/bg-header.png");
+  background-image: url("images/bg-header.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
