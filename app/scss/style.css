@@ -348,7 +348,7 @@ span.bleu {
   left: 0;
   right: 0;
   bottom: -30px;
-  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  background: linear-gradient(to right, #20b782, #6026f6);
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 }
@@ -464,9 +464,15 @@ span.bleu {
   margin-bottom: 3.75rem;
 }
 .feature__intro > h2 {
-  font-size: 3.25rem;
-  font-weight: 900;
+  font-size: 2rem;
+  font-weight: 700;
   color: #333333;
+  margin-bottom: 1.25rem;
+}
+.feature__intro > h2 span {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #60c6f6;
   margin-bottom: 1.25rem;
 }
 @media (min-width: 64em) {
@@ -475,10 +481,14 @@ span.bleu {
   }
 }
 .feature__informatique:hover {
-  background: hsl(233deg, 8%, 62%);
+  background-image: linear-gradient(to bottom, rgba(9, 223, 9, 0.5), rgba(23, 196, 66, 0.5)), url("/images/informatique.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 2rem;
   transition: background 300ms ease-in-out;
-  color: white !important;
+  color: white;
+  font-size: 2rem;
 }
 .feature__informatique:hover > .feature__title {
   color: white;
@@ -488,16 +498,6 @@ span.bleu {
 }
 .feature__informatique:hover > .feature__plus > a {
   visibility: visible;
-}
-.feature__plus > a {
-  visibility: hidden;
-  padding: 1.25rem 2.5rem;
-  font-size: 0.875rem;
-  font-weight: 900;
-  line-height: 1.15;
-  color: white;
-  text-decoration: underline;
-  transition: border 300ms ease-in-out;
 }
 .feature__hr {
   width: 90%;
@@ -524,17 +524,9 @@ span.bleu {
     flex: 1;
   }
 }
-.feature__icon {
-  margin-bottom: 1.875rem;
-}
-@media (min-width: 64em) {
-  .feature__icon {
-    margin-bottom: 2.75rem;
-  }
-}
 .feature__title {
   font-size: 1.25rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.15;
   color: #333333;
   margin-bottom: 1rem;
@@ -548,6 +540,16 @@ span.bleu {
 .feature__description {
   font-size: 0.875rem;
   line-height: 1.5;
+}
+.feature__plus > a {
+  visibility: hidden;
+  padding: 1.25rem 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.15;
+  color: white;
+  text-decoration: underline;
+  transition: 300ms ease-in-out;
 }
 
 .footer {
