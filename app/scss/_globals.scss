@@ -15,7 +15,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: $font-sm;
   font-weight: 300;
-  color: red;
+  color: $dark;
   line-height: 1.3;
   overflow-x: hidden;
 
@@ -187,3 +187,27 @@ button,
 }
 
 
+span.bleu {
+  display: block;
+  color: $blue;
+  font-weight:900;
+  font-size: $font-xlg;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.arrow {
+
+justify-content:space-between;
+padding: 0.8rem;
+
+}
+
+.feature__description  {
+  display: flex;
+
+}
+
+.feature__description p {
+  justify-content: space-between;
+}

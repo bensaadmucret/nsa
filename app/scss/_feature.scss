@@ -1,34 +1,92 @@
 .feature {
   text-align: center;
 
-  @include breakpoint-up(medium){
+  @include breakpoint-up(medium) {
     text-align: left;
   }
 
   &__intro {
     margin-bottom: 3.75rem;
 
-    @include breakpoint-up(large){
+    >h2 {
+      font-size: $font-xlg;
+      font-weight: 900;
+      color: $dark;
+      margin-bottom: 1.25rem;
+    }
+
+
+
+    @include breakpoint-up(large) {
       width: 60%;
     }
   }
 
+  &__informatique {
+    &:hover {
+      background: $grayishBlue;
+      border-radius: 2rem;
+      transition: background 300ms ease-in-out;
+      color: white !important;
+
+      >.feature__title {
+        color: white;
+      }
+
+      >.feature__hr {
+        border-top: 3px solid #ffffff;
+      }
+
+      >.feature__plus >a {
+        visibility: visible;
+      }
+
+
+    }
+  }
+
+  &__plus {
+
+
+    >a {
+      visibility: hidden;
+      padding: 1.25rem 2.5rem;
+      font-size: $font-sm;
+      font-weight: 900;
+      line-height: 1.15;
+      color: white;
+      text-decoration: underline;
+      transition: border 300ms ease-in-out;
+    }
+
+    
+  }
+
+  &__hr {
+    width: 90%;
+    border: 0;
+    border-top: 3px solid $dark;
+    margin-bottom: 0.75rem;
+  }
+
   &__grid {
 
-    @include breakpoint-up(medium){
+    @include breakpoint-up(medium) {
       display: flex;
-      flex-wrap: wrap;     
+      flex-wrap: wrap;
     }
   }
 
   &__item {
-    padding: 0.9375rem;
+    padding: 1.5rem;
 
-    @include breakpoint-up(medium){
+
+
+    @include breakpoint-up(medium) {
       flex: 0 0 50%;
     }
 
-    @include breakpoint-up(large){
+    @include breakpoint-up(large) {
       flex: 1;
     }
   }
@@ -36,19 +94,21 @@
   &__icon {
     margin-bottom: 1.875rem;
 
-    @include breakpoint-up(large){
+    @include breakpoint-up(large) {
       margin-bottom: 2.75rem;
-    }    
+    }
   }
 
   &__title {
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 900;
     line-height: 1.15;
-    color: $darkBlue;
+    color: $dark;
     margin-bottom: 1rem;
 
-    @include breakpoint-up(large){
+
+
+    @include breakpoint-up(large) {
       font-size: 1.5rem;
       margin-bottom: 1.5rem;
     }
@@ -58,4 +118,6 @@
     font-size: 0.875rem;
     line-height: 1.5;
   }
+
+
 }
