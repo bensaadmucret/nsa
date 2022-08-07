@@ -146,7 +146,7 @@ a:hover {
 }
 
 .container {
-  max-width: 69.375rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .container--pall {
@@ -276,6 +276,60 @@ span.bleu {
   justify-content: space-between;
 }
 
+.carousel__container {
+  display: flex;
+  height: 300px;
+  width: 100%;
+}
+@media (max-width: 63.9375em) {
+  .carousel__container {
+    width: 300%;
+    height: 200px;
+  }
+}
+
+.carousel__item {
+  flex: 3;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel__next, .carousel__prev {
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: 20px 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel__prev {
+  background-image: url(/images/arrow-left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  background-size: 20px 20px;
+  right: -30px;
+}
+
+.carousel__next {
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-size: 20px 20px;
+  background-image: url(/images/arrow-right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation {
+  position: relative;
+  padding-top: 5rem;
+  max-width: 5rem;
+}
+
 .header {
   position: relative;
   z-index: 1;
@@ -366,6 +420,7 @@ span.bleu {
   font-size: small;
   font-weight: 400;
   padding-left: 1rem;
+  margin-top: 2rem;
 }
 
 .hero {
@@ -481,14 +536,17 @@ span.bleu {
   }
 }
 .feature__informatique:hover {
-  background-image: linear-gradient(to bottom, rgba(9, 223, 9, 0.5), rgba(23, 196, 66, 0.5)), url("/images/informatique.png");
+  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("/images/bg-informatique.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 2rem;
-  transition: background 300ms ease-in-out;
   color: white;
   font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .feature__informatique:hover > .feature__title {
   color: white;
@@ -512,7 +570,10 @@ span.bleu {
   }
 }
 .feature__item {
-  padding: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 @media (min-width: 40em) {
   .feature__item {
