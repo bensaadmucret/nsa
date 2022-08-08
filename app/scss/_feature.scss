@@ -2,22 +2,23 @@
   text-align: center;
 
   @include breakpoint-up(medium) {
-    text-align: left;
+    text-align: center;
   }
 
   &__intro {
     margin-bottom: 3.75rem;
 
     >h2 {
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 2.4rem;
+      font-weight: 900;
       color: $dark;
       margin-bottom: 1.25rem;
+      text-align: left;
     }
 
     >h2 span {
       font-size: 2.25rem;
-      font-weight: 700;
+      font-weight: 900;
       color: $blue;
       margin-bottom: 1.25rem;
     }
@@ -42,7 +43,6 @@
     background-repeat: no-repeat;
     border-radius: 2rem;
     color: white;
-    font-size: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: 1.5rem;
@@ -65,9 +65,8 @@
 
   &__gouvernance {
 
-    background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)),
-      url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
-    
+    background-image: linear-gradient(rgba(35,113,147, 0.5), rgba(35,113,147, 0.747)),
+    url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png"); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -95,7 +94,7 @@
   }
 
   &__securite {
-    background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)),
+    background-image: linear-gradient(rgba(247, 107, 100, 0.5), rgba(248,91,131,0.747)),
       url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
    
     background-size: cover;
@@ -125,8 +124,8 @@
   }
 
   &__formation {
-    background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)),
-      url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
+    background-image: linear-gradient(rgba(96,68,147, 0.5), rgba(127,97,181, 0.747)),
+      url("https://bensaadmucret.github.io/nsa/images/formation.jpg");
     
     background-size: cover;
     background-position: center;
@@ -156,7 +155,7 @@
   }
 
   &__recrutement {
-    background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)),
+    background-image: linear-gradient(rgba(44,220,228, 0.5), rgba(66, 253,218, 0.747)),
       url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
     background-size: cover;
     background-position: center;
@@ -186,11 +185,8 @@
 
 
 
-
-
-
   &__hr {
-    width: 90%;
+    width: 100%;
     border: 0;
     border-top: 3px solid $dark;
     margin-bottom: 0.75rem;
@@ -225,7 +221,7 @@
 
   &__title {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.15;
     color: $dark;
     margin-bottom: 1rem;
@@ -241,6 +237,8 @@
   &__description {
     font-size: 0.875rem;
     line-height: 1.5;
+    font-weight: 500;
+    text-align: left;
   }
 
   &__plus {

@@ -226,6 +226,12 @@ button,
   transition: opacity 300ms ease-in-out;
   overflow: hidden;
 }
+button:hover,
+.button:hover {
+  background-image: linear-gradient(to right, #60c6f6, #3577f6);
+  color: hsl(0deg, 0%, 100%);
+  transition: color 300ms ease-in-out;
+}
 button::before,
 .button::before {
   content: "";
@@ -291,18 +297,20 @@ span.bleu {
   overflow: hidden;
 }
 
-.carousel__next, .carousel__prev {
+.carousel__next,
+.carousel__prev {
   cursor: pointer;
   position: absolute;
   width: 40px;
   height: 40px;
   background-size: 20px 20px;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 15px rgba(99, 99, 99, 0.5);
 }
 
 .carousel__prev {
   background-image: url(https://bensaadmucret.github.io/nsa/images/arrow-right.png);
+  background-image: url("/images/arrow-left.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 40px;
@@ -312,8 +320,10 @@ span.bleu {
   right: 30px;
 }
 .carousel__prev:hover {
-  background-color: #60c6f6;
+  background: url("/images/arrow-left-white.svg"), linear-gradient(to right, #60c6f6, #3577f6);
   transition: all 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .carousel__next {
@@ -322,12 +332,16 @@ span.bleu {
   height: 40px;
   background-size: 20px 20px;
   background-image: url(https://bensaadmucret.github.io/nsa/images/arrow-left.png);
+  background-image: url("/images/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 .carousel__next:hover {
-  background-color: #60c6f6;
   transition: all 0.3s ease-in-out;
+  background: url("/images/arrow-white.svg"), linear-gradient(to right, #60c6f6, #3577f6);
+  transition: all 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navigation {
@@ -369,7 +383,7 @@ span.bleu {
   display: block;
   width: 26px;
   height: 2px;
-  background-color: #3577f6;
+  background-color: #ffffff;
   transition: all 300ms ease-in-out;
   transform-origin: 3px 1px;
 }
@@ -408,15 +422,14 @@ span.bleu {
   height: 5px;
   left: 0;
   right: 0;
-  bottom: -20px;
+  bottom: -10px;
   background: linear-gradient(to right, hsl(0deg, 0%, 100%), hsl(0deg, 0%, 100%));
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  transition: color 200ms ease-in-out;
 }
 .header__links a:hover {
-  color: #333333;
-  font-weight: 600;
-  transition: color 300ms ease-in-out;
+  font-weight: 400;
+  transition: opacity 300ms ease-in-out;
 }
 .header__links a:hover::before {
   opacity: 1;
@@ -430,6 +443,10 @@ span.bleu {
   font-weight: 400;
   padding-left: 1rem;
   margin-top: 2rem;
+}
+.header__cta:hover {
+  color: #333333;
+  transition: color 200ms ease-in-out;
 }
 
 .hero {
@@ -458,11 +475,16 @@ span.bleu {
   margin: 50px;
 }
 .hero__text > h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 900;
-  line-height: 1.15;
+  line-height: 1.18;
   color: white;
   margin-bottom: 1rem;
+}
+@media (max-width: 63.9375em) {
+  .hero__text > h1 {
+    font-size: 2.3rem;
+  }
 }
 @media (min-width: 64em) {
   .hero__text {
@@ -481,6 +503,9 @@ span.bleu {
   color: white;
   font-size: 0.875rem;
 }
+.hero__social-icone > a:hover {
+  color: #000000;
+}
 @media (min-width: 64em) {
   .hero__social-icone {
     flex: 2;
@@ -490,7 +515,7 @@ span.bleu {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    padding-top: 10rem;
+    padding-top: 15rem;
   }
 }
 @media (max-width: 63.9375em) {
@@ -502,7 +527,7 @@ span.bleu {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    padding-top: 10rem;
+    padding-bottom: 3rem;
   }
 }
 .hero__social-icone > .social-icone__link__lang {
@@ -521,21 +546,22 @@ span.bleu {
 }
 @media (min-width: 40em) {
   .feature {
-    text-align: left;
+    text-align: center;
   }
 }
 .feature__intro {
   margin-bottom: 3.75rem;
 }
 .feature__intro > h2 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.4rem;
+  font-weight: 900;
   color: #333333;
   margin-bottom: 1.25rem;
+  text-align: left;
 }
 .feature__intro > h2 span {
   font-size: 2.25rem;
-  font-weight: 700;
+  font-weight: 900;
   color: #60c6f6;
   margin-bottom: 1.25rem;
 }
@@ -551,7 +577,6 @@ span.bleu {
   background-repeat: no-repeat;
   border-radius: 2rem;
   color: white;
-  font-size: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 1.5rem;
@@ -572,7 +597,7 @@ span.bleu {
   visibility: visible;
 }
 .feature__gouvernance {
-  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
+  background-image: linear-gradient(rgba(35, 113, 147, 0.5), rgba(35, 113, 147, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -594,7 +619,7 @@ span.bleu {
   visibility: visible;
 }
 .feature__securite {
-  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
+  background-image: linear-gradient(rgba(247, 107, 100, 0.5), rgba(248, 91, 131, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -616,7 +641,7 @@ span.bleu {
   visibility: visible;
 }
 .feature__formation {
-  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
+  background-image: linear-gradient(rgba(96, 68, 147, 0.5), rgba(127, 97, 181, 0.747)), url("https://bensaadmucret.github.io/nsa/images/formation.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -638,7 +663,7 @@ span.bleu {
   visibility: visible;
 }
 .feature__recrutement {
-  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
+  background-image: linear-gradient(rgba(44, 220, 228, 0.5), rgba(66, 253, 218, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -660,7 +685,7 @@ span.bleu {
   visibility: visible;
 }
 .feature__hr {
-  width: 90%;
+  width: 100%;
   border: 0;
   border-top: 3px solid #333333;
   margin-bottom: 0.75rem;
@@ -689,7 +714,7 @@ span.bleu {
 }
 .feature__title {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.15;
   color: #333333;
   margin-bottom: 1rem;
@@ -703,6 +728,8 @@ span.bleu {
 .feature__description {
   font-size: 0.875rem;
   line-height: 1.5;
+  font-weight: 500;
+  text-align: left;
 }
 .feature__plus > a {
   visibility: hidden;
