@@ -255,22 +255,23 @@ padding: 0.8rem;
 }
 
 .carousel__prev {
-  background-image: url(/images/arrow-left.png);
+  background-image: url(/images/arrow-right.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 40px;
   height: 40px;
   background-size: 20px 20px;
-   right: -30px;
+  border-radius: 50%;
+  right: 30px;
    
 }
 
 .carousel__next {
- left: 10px;
+  left: 65px;
   width: 40px;
   height: 40px;
   background-size: 20px 20px;
-  background-image: url(/images/arrow-right.png);
+  background-image: url(/images/arrow-left.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -279,5 +280,7 @@ padding: 0.8rem;
   position: relative;
   padding-top: 5rem;  
   max-width: 5rem;
-
+  @include breakpoint-down(medium) {
+      margin-top: 15rem;  
+    }
 }

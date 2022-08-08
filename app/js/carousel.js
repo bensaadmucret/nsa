@@ -31,15 +31,16 @@ class Carousel {
 
         this.items = children.map(child => {
             let item = this.createDivWithClass('carousel__item')
-
-
             item.appendChild(child)
             this.container.appendChild(item)
             return item
         })
+
         this.setStyle()
-       this.createNavigation()
+        this.createNavigation()
     }
+
+
     /**
      * Applique les dimensions et la position de l'élément
      */
@@ -47,6 +48,7 @@ class Carousel {
     setStyle() {
         let ratio = this.items.length / this.options.slidesToShow;
         this.container.style.width = (ratio * 100) + '%'
+
         this.items.forEach(item => item.style.width = (100 / this.options.slidesToShow) + '%')
     }
 
@@ -61,7 +63,7 @@ class Carousel {
         return div;
     }
 
-   createNavigation() {
+    createNavigation() {
         let nextButton = this.createDivWithClass('carousel__next');
         let prevButton = this.createDivWithClass('carousel__prev');
 
@@ -74,17 +76,17 @@ class Carousel {
     }
 
 
-       
+
 
     next() {
 
         this.gotoItem(this.currentItem + this.options.slidesToScroll)
-        console.log('next', this.gotoItem(this.currentItem - this.options.slidesToScroll))
-    }
 
+    }
     prev() {
-        this.gotoItem(this.currentItem - this.options.slidesToScroll)
-        console.log('prev', this.gotoItem(this.currentItem - this.options.slidesToScroll))
+        this.gotoItem(this.currentItem + this.options.slidesToScroll)
+
+
     }
 
     /**
@@ -95,27 +97,55 @@ class Carousel {
      * @method getItem
      */
     gotoItem(index) {
-        if (index < 0) {
-            index = this.items.length - this.options.slidesToShow
-            console.log('index', index)
 
+        if (index >= this.items.length) {
+            index = 0;
         }
 
-        let translateX = index * -100 / this.options.slidesToShow
-        this.currentItem = index
-        this.container.style.transform = 'translateX(' + translateX + '%)'
+        let translateX = index * -100 / this.items.length
+        this.container.style.transform = 'translate3d(' + translateX + '%,0,0)'
         this.currentItem = index;
-
-
-
+       
+        
+        if (this.currentItem === 1) {
+            document.querySelector('#feature__gouvernance').classList.add("feature__gouvernance");
+            document.querySelector('#feature__informatique').classList.remove("feature__informatique");
+        } else {
+            document.querySelector('#feature__gouvernance').classList.remove("feature__gouvernance");
+            document.querySelector('#feature__informatique').classList.add("feature__informatique");
+        }   
+    
+        if(this.currentItem === 2) {
+            document.querySelector('#feature__securite').classList.add("feature__securite");
+           
+        } else {
+            document.querySelector('#feature__securite').classList.remove("feature__securite");
+          
+        }
+        if (this.currentItem === 3) {
+            document.querySelector('#feature__formation').classList.add("feature__formation");
+           
+        } else {
+            document.querySelector('#feature__formation').classList.remove("feature__formation");
+            
+        }
+        if (this.currentItem === 4) {
+            document.querySelector('#feature__recrutement').classList.add("feature__recrutement");
+           
+        } else {
+            document.querySelector('#feature__recrutement').classList.remove("feature__recrutement");
+           
+        }
+        
     }
+    
 
 }
 
 
 document.addEventListener('DOMContentLoaded', function () {
     new Carousel(document.querySelector('#Carousel'), {
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         slidesToShow: 3,
     });
 
