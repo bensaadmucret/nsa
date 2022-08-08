@@ -302,7 +302,7 @@ span.bleu {
 }
 
 .carousel__prev {
-  background-image: url(/images/arrow-right.png);
+  background-image: url(https://bensaadmucret.github.io/nsa/images/arrow-right.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 40px;
@@ -321,7 +321,7 @@ span.bleu {
   width: 40px;
   height: 40px;
   background-size: 20px 20px;
-  background-image: url(/images/arrow-left.png);
+  background-image: url(https://bensaadmucret.github.io/nsa/images/arrow-left.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -543,7 +543,7 @@ span.bleu {
   }
 }
 .feature__informatique {
-  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("/images/bg-informatique.png");
+  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -570,7 +570,7 @@ span.bleu {
   visibility: visible;
 }
 .feature__gouvernance {
-  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("/images/bg-informatique.png");
+  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -592,7 +592,7 @@ span.bleu {
   visibility: visible;
 }
 .feature__securite {
-  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("/images/bg-informatique.png");
+  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -614,7 +614,7 @@ span.bleu {
   visibility: visible;
 }
 .feature__formation {
-  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("/images/bg-informatique.png");
+  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -636,7 +636,7 @@ span.bleu {
   visibility: visible;
 }
 .feature__recrutement {
-  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("/images/bg-informatique.png");
+  background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)), url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
