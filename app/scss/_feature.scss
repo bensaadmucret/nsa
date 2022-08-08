@@ -31,9 +31,12 @@
 
   &__informatique {
 
+    @include breakpoint-down(medium) {
+      width: 100% !important;
+      }
     background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)),
       url("/images/bg-informatique.png");
-
+   
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -64,7 +67,7 @@
 
     background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)),
       url("/images/bg-informatique.png");
-
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -94,7 +97,7 @@
   &__securite {
     background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)),
       url("/images/bg-informatique.png");
-
+   
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,7 +127,7 @@
   &__formation {
     background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)),
       url("/images/bg-informatique.png");
-
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -135,6 +138,7 @@
     padding-bottom: 2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+
 
 
     >.feature__title {
@@ -154,7 +158,6 @@
   &__recrutement {
     background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)),
       url("/images/bg-informatique.png");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -206,7 +209,6 @@
     padding-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
-
 
 
     @include breakpoint-up(medium) {
