@@ -93,13 +93,15 @@
         height: 5px;
         left: 0;
         right: 0;
-        bottom: -30px;
-        background: linear-gradient(to right, $limeGreen, $brightCyan);
+        bottom: -20px;
+        background: linear-gradient(to right, $white, $white);
         opacity: 0;
         transition: opacity 300ms ease-in-out;
       }
       &:hover {
-        color: $darkBlue;
+        color: $dark;
+        font-weight: 600;
+        transition:  color 300ms ease-in-out;
 
         &::before {
           opacity: 1;
