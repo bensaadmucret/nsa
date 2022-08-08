@@ -309,8 +309,7 @@ span.bleu {
 }
 
 .carousel__prev {
-  background-image: url(https://bensaadmucret.github.io/nsa/images/arrow-right.png);
-  background-image: url("/images/arrow-left.svg");
+  background-image: url("https://bensaadmucret.github.io/nsa/images/arrow-left.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 40px;
@@ -320,7 +319,7 @@ span.bleu {
   right: 30px;
 }
 .carousel__prev:hover {
-  background: url("/images/arrow-left-white.svg"), linear-gradient(to right, #60c6f6, #3577f6);
+  background: url("https://bensaadmucret.github.io/nsa/images/arrow-left-white.svg"), linear-gradient(to right, #60c6f6, #3577f6);
   transition: all 0.3s ease-in-out;
   background-repeat: no-repeat;
   background-position: center;
@@ -331,14 +330,13 @@ span.bleu {
   width: 40px;
   height: 40px;
   background-size: 20px 20px;
-  background-image: url(https://bensaadmucret.github.io/nsa/images/arrow-left.png);
-  background-image: url("/images/arrow.svg");
+  background-image: url("https://bensaadmucret.github.io/nsa/images/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 .carousel__next:hover {
   transition: all 0.3s ease-in-out;
-  background: url("/images/arrow-white.svg"), linear-gradient(to right, #60c6f6, #3577f6);
+  background: url("https://bensaadmucret.github.io/nsa/images/arrow-white.svg"), linear-gradient(to right, #60c6f6, #3577f6);
   transition: all 0.3s ease-in-out;
   background-repeat: no-repeat;
   background-position: center;
