@@ -47,7 +47,7 @@ class Carousel {
     setStyle() {
        // let ratio = this.items.length / this.options.slidesToShow;
      
-        if(window.innerWidth < 768){
+        /*if(window.innerWidth < 768){
             let ratio = this.items.length / this.options.slidesToShow;
             this.options.slidesToShow = 1;
             ratio = this.items.length / this.options.slidesToShow;
@@ -57,7 +57,7 @@ class Carousel {
             let ratio = this.items.length / this.options.slidesToShow;
             this.options.slidesToShow = 1;
             ratio = this.items.length / this.options.slidesToShow;
-        }
+        }*/
         window.innerWidth < 768 ? this.options.slidesToShow = 1 : this.options.slidesToShow = 3;
         let ratio = this.items.length / this.options.slidesToShow;
         this.container.style.width = (ratio * 100) + '%'
