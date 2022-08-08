@@ -684,6 +684,28 @@ span.bleu {
 .feature__recrutement > .feature__plus > a {
   visibility: visible;
 }
+.feature__mentorat {
+  background-image: linear-gradient(rgba(254, 173, 30, 0.5), rgba(246, 80, 28, 0.747)), url("https://bensaadmucret.github.io/nsa/images/formation.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+  color: white;
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.feature__mentorat > .feature__title {
+  color: white;
+}
+.feature__mentorat > .feature__hr {
+  border-top: 3px solid #ffffff;
+}
+.feature__mentorat > .feature__plus > a {
+  visibility: visible;
+}
 .feature__hr {
   width: 100%;
   border: 0;

@@ -34,10 +34,11 @@
 
     @include breakpoint-down(medium) {
       width: 100% !important;
-      }
+    }
+
     background-image: linear-gradient(rgba(41, 230, 34, 0.5), rgba(0, 255, 98, 0.747)),
-      url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
-   
+    url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,8 +66,8 @@
 
   &__gouvernance {
 
-    background-image: linear-gradient(rgba(35,113,147, 0.5), rgba(35,113,147, 0.747)),
-    url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png"); 
+    background-image: linear-gradient(rgba(35, 113, 147, 0.5), rgba(35, 113, 147, 0.747)),
+      url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -94,9 +95,9 @@
   }
 
   &__securite {
-    background-image: linear-gradient(rgba(247, 107, 100, 0.5), rgba(248,91,131,0.747)),
+    background-image: linear-gradient(rgba(247, 107, 100, 0.5), rgba(248, 91, 131, 0.747)),
       url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
-   
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,16 +125,16 @@
   }
 
   &__formation {
-    background-image: linear-gradient(rgba(96,68,147, 0.5), rgba(127,97,181, 0.747)),
+    background-image: linear-gradient(rgba(96, 68, 147, 0.5), rgba(127, 97, 181, 0.747)),
       url("https://bensaadmucret.github.io/nsa/images/formation.jpg");
-    
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 2rem;
     color: white;
     font-size: 2rem;
-    
+
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: 1.5rem;
@@ -156,8 +157,37 @@
   }
 
   &__recrutement {
-    background-image: linear-gradient(rgba(44,220,228, 0.5), rgba(66, 253,218, 0.747)),
+    background-image: linear-gradient(rgba(44, 220, 228, 0.5), rgba(66, 253, 218, 0.747)),
       url("https://bensaadmucret.github.io/nsa/images/bg-informatique.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    color: white;
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+
+    >.feature__title {
+      color: white;
+    }
+
+    >.feature__hr {
+      border-top: 3px solid #ffffff;
+    }
+
+    >.feature__plus>a {
+      visibility: visible;
+
+    }
+  }
+
+  &__mentorat {
+    background-image: linear-gradient(rgba(254,173,30, 0.5), rgba(246,80,28, 0.747)),
+      url("https://bensaadmucret.github.io/nsa/images/formation.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

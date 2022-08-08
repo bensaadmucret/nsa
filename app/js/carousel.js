@@ -140,9 +140,15 @@ class Carousel {
             document.querySelector('#feature__recrutement').classList.remove("feature__recrutement");
 
         }
+        if (this.currentItem === 5) {
+            document.querySelector('#feature__mentorat').classList.add("feature__mentorat");
+
+        } else {
+            document.querySelector('#feature__mentorat').classList.remove("feature__mentorat");
+
+        }
 
     }
-
 
 }
 document.addEventListener('DOMContentLoaded', function () {
