@@ -94,7 +94,7 @@ class Carousel {
     }
 
     /**
-     * 
+     * fix responsive
      * @param {number} index
      * @returns {HTMLElement}
      * @memberof Carousel
