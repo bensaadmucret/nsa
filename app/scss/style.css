@@ -726,6 +726,7 @@ span.bleu {
   padding-left: 2rem;
   padding-right: 2rem;
   height: 100%;
+  cursor: pointer;
 }
 @media (min-width: 40em) {
   .feature__item {

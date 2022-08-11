@@ -18,6 +18,7 @@ class Carousel {
         let children = [].slice.call(element.children)
         this.currentItem = 0;
         this.navigation = document.querySelector('.navigation')
+        const slider = this.items;
 
         window.addEventListener('resize', this.setStyle.bind(this));
 
@@ -38,6 +39,8 @@ class Carousel {
 
         this.setStyle()
         this.createNavigation()
+       
+        
     }
 
     /**
@@ -45,19 +48,6 @@ class Carousel {
      */
 
     setStyle() {
-       // let ratio = this.items.length / this.options.slidesToShow;
-     
-        /*if(window.innerWidth < 768){
-            let ratio = this.items.length / this.options.slidesToShow;
-            this.options.slidesToShow = 1;
-            ratio = this.items.length / this.options.slidesToShow;
-           
-        }
-        if(window.innerWidth < 480){
-            let ratio = this.items.length / this.options.slidesToShow;
-            this.options.slidesToShow = 1;
-            ratio = this.items.length / this.options.slidesToShow;
-        }*/
         window.innerWidth < 768 ? this.options.slidesToShow = 1 : this.options.slidesToShow = 3;
         let ratio = this.items.length / this.options.slidesToShow;
         this.container.style.width = (ratio * 100) + '%'
@@ -79,12 +69,53 @@ class Carousel {
     createNavigation() {
         let nextButton = this.createDivWithClass('carousel__next');
         let prevButton = this.createDivWithClass('carousel__prev');
+        let slider = this.items;
 
         this.navigation.appendChild(nextButton)
         this.navigation.appendChild(prevButton)
         nextButton.addEventListener('click', this.next.bind(this));
         prevButton.addEventListener('click', this.prev.bind(this));
+
+        this.items.forEach(item => {
+            item.addEventListener('touchstart', this.touchStart.bind(this));
+            item.addEventListener('touchmove', this.touchMove.bind(this));
+            item.addEventListener('touchend', this.touchEnd.bind(this));
+        }, this)
+    
+         
+    }    
+   
+   // scroll to the next item white touch event
+    touchStart(event) {
+        this.touchStartX = event.changedTouches[0].screenX;
+        this.touchStartY = event.changedTouches[0].screenY;
     }
+
+    touchEnd(event) {
+        this.touchEndX = event.changedTouches[0].screenX;
+        this.touchEndY = event.changedTouches[0].screenY;
+        this.swipe();
+    }
+
+    touchMove(event) {
+        this.touchMoveX = event.changedTouches[0].screenX;
+        this.touchMoveY = event.changedTouches[0].screenY;
+    }
+
+    swipe() {
+        let swipeLength = this.touchEndX - this.touchStartX;
+        let swipeLengthY = this.touchEndY - this.touchStartY;
+        if (Math.abs(swipeLength) > Math.abs(swipeLengthY)) {
+            if (swipeLength > 0) {
+                this.prev();
+            } else {
+                this.next();
+            }
+        }
+    }
+
+
+   
 
     next() {
         this.gotoItem(this.currentItem + this.options.slidesToScroll)
